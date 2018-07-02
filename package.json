@@ -1,0 +1,22 @@
+{
+   "name": "FoxProjectOne",
+   "main": "server.js",
+   "scripts": {
+      "start": "nodemon server.js",
+      "parse": "node parseArgs",
+      "prompt": "node prompt"
+   },
+   "dependencies": {
+      "args": "^5.0.0",
+      "body-parser": "latest",
+      "express": "latest",
+      "figlet": "^1.2.0",
+      "got": "^8.3.1",
+      "jsonwebtoken": "latest",
+      "mongoose": "latest",
+      "morgan": "latest",
+      "passport": "latest",
+      "passport-jwt": "latest",
+      "prompt": "^1.0.0"
+   }
+}
