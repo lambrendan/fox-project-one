@@ -1,5 +1,5 @@
 {
-   "name": "fox-project-one",
+   "name": "loginauth",
    "description": "Account web server",
    "version": "1.0.0",
    "main": "server.js",
