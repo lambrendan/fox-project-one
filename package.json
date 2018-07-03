@@ -1,10 +1,12 @@
 {
-   "name": "FoxProjectOne",
+   "name": "fox-project-one",
+   "description": "Account web server",
+   "version": "1.0.0",
    "main": "server.js",
    "scripts": {
       "start": "nodemon server.js",
-      "parse": "node parseArgs",
-      "prompt": "node prompt"
+      "parse": "node parseArgs.js",
+      "prompt": "node prompt.js"
    },
    "dependencies": {
       "args": "^5.0.0",

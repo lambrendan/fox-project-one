@@ -1,6 +1,6 @@
 var args = require('args');
 const got = require('got');
-const prompt = require('prompt');
+
 
 //HTTP Post to signup a user
 const signup = function(name, sub, option) { 
@@ -41,7 +41,6 @@ const signin = function(name, sub, option) {
 //HTTP Delete to delete a user
 const deleteUser = function(name, sub, option ) {
     var urlS = 'http://localhost:3000/api/delete/' + option.username;
-    console.log(urlS);
     const deleteUser = got.delete(urlS);
     deleteUser
         .then(function(res){
@@ -63,11 +62,16 @@ args
     .command('delete', 'Delete the user', deleteUser)
 
     const flags = args.parse(process.argv);
-    var inputCommand = args.sub[0].toString();
+    if ( !args.sub[0] ) {
+        console.log('Please enter a command');
+    }
+    else {
+        var inputCommand = args.sub[0].toString();
 
-    //Check to make sure that the correct commands were inputted
-    if( inputCommand.trim() != 'signup' && inputCommand.trim() != 'signin' && inputCommand.trim() != 'delete' ){
-        args.showHelp();
+        //Check to make sure that the correct commands were inputted
+        if( inputCommand.trim() != 'signup' && inputCommand.trim() != 'signin' && inputCommand.trim() != 'delete' ){
+            args.showHelp();
+        }
     }
 
 

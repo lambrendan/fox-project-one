@@ -54,7 +54,7 @@ router.post('/signin', function(req, res){
     }, function(err, user) {
         if( err ) throw err;
         if( !user ) {
-            res.send({ success: false, message: 'User not found. Try again. ' });
+            res.send({ success: false, message: 'User not found. Try again.' });
         }
         //Compare passwords and check to make sure they are correct.
         else {
@@ -73,7 +73,7 @@ router.post('/signin', function(req, res){
                     })
                 }
                 else {
-                    res.json({ success: false, message: ' Wrong password entered.'});
+                    res.json({ success: false, message: '   Wrong password entered.'});
                     figlet('Stop hacking accounts', function( err, data ) {
                         if (err ) {
                             console.log('Oops');
